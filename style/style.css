@@ -31,7 +31,7 @@ nav {
 
 .flank-text {
   text-align: center;
-  font-size: 30vh;
+  font-size: 26vh;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -50,16 +50,15 @@ nav {
   color: #2b2929;
 }
 .sentence-container {
-  padding: 30px;
   width: 65%;
   margin: 30px auto;
 }
 .sentence-container > p {
-  font-size: 5rem;
-  margin: 50px auto;
+  font-size: 3rem;
+  margin: 0px auto;
 }
 .flank-for {
-  margin-top: 200px !important;
+  margin-top: 150px !important;
 }
 
 .join_us {
