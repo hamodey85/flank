@@ -39,19 +39,62 @@ nav {
   margin: 0;
 }
 
-.arrow-container {
-  width: 100px;
-  height: 50px;
-  margin: 100px auto;
+.icon {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+  animation: bounce 1000ms ease-in-out infinite;
+}
+@keyframes bounce {
+  0% {
+    top: 70%;
+  }
+  50% {
+    top: 72%;
+  }
+  100% {
+    top: 70%;
+  }
 }
 .arrow {
-  height: 80%;
-  width: 10px;
-  color: #2b2929;
+  position: absolute;
+  top: 25px;
+  width: 90%;
+  height: 10px;
+  background-color: var(--black);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  animation: arrow 700ms linear infinite;
+  transform: rotate(90deg);
+}
+
+.arrow::after,
+.arrow::before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 10px;
+  right: -8px;
+  background-color: var(--black);
+}
+
+.arrow::after {
+  top: -12px;
+  transform: rotate(45deg);
+}
+
+.arrow::before {
+  top: 12px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transform: rotate(-45deg);
 }
 .sentence-container {
   width: 65%;
   margin: 30px auto;
+  padding-top: 20px;
 }
 .sentence-container > p {
   font-size: 4.6rem;

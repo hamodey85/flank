@@ -21,14 +21,6 @@
   </head>
   <body>
     <!-- *************************** -->
-    <!-- ****** AOS initial ******** -->
-    <!-- *************************** -->
-    <script src="/js/aos.js"></script>
-    <script src="/js/script.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <!-- *************************** -->
     <!-- ********* HEADER ********** -->
     <!-- *************************** -->
     <header>
@@ -37,14 +29,14 @@
         <a class="patreon" href="#">patreon</a>
       </nav>
       <h1 class="flank-text">flank</h1>
-      <div class="arrow-container">
+      <div id="arrow" class="icon">
         <div class="arrow"></div>
       </div>
     </header>
     <!-- *************************** -->
     <!-- **** Section TEXT ********* -->
     <!-- *************************** -->
-    <section class="sentence-container">
+    <section id="sentence-container" class="sentence-container">
       <p data-aos="fade-up" data-aos-offset="100" data-aos-delay="100" data-aos-duration="1000">
         We built flank for
       </p>
@@ -96,5 +88,13 @@
     <!-- ********* Footer ********** -->
     <!-- *************************** -->
     <footer><div>flank footer goes here</div></footer>
+    <!-- *************************** -->
+    <!-- ****** AOS initial ******** -->
+    <!-- *************************** -->
+    <script src="/js/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
