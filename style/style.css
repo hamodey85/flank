@@ -51,10 +51,15 @@ nav {
 }
 .sentence-container {
   padding: 30px;
+  width: 65%;
+  margin: 30px auto;
 }
 .sentence-container > p {
-  font-size: 6rem;
-  margin: 30px auto;
+  font-size: 5rem;
+  margin: 50px auto;
+}
+.flank-for {
+  margin-top: 200px !important;
 }
 
 .join_us {
