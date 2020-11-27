@@ -99,6 +99,17 @@ nav {
 .sentence-container > p {
   font-size: 4.6rem;
   margin: 0px auto;
+  /* text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+
+  transform: translateY(30%);
+  opacity: 0;
+  animation: rise 0.3s cubic-bezier(0.87, 0, 0.04, 1) 1 forwards;
+  animation-delay: 0ms !important;
+  backface-visibility: hidden; */
+}
+.sentence-container span {
+  display: inline-block;
 }
 .flank-for {
   margin-top: 150px !important;
@@ -127,3 +138,22 @@ footer > div {
   padding: 20px;
   font-size: 1.6rem;
 }
+/* .u-rise {
+  display: inline-block;
+  transform: translateY(30%);
+  opacity: 0;
+}
+.u-rise.risen {
+  animation: rise 0.3s cubic-bezier(0.87, 0, 0.04, 1) 1 forwards;
+}
+
+@keyframes rise {
+  0% {
+    opacity: 1;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+} */
