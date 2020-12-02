@@ -8,6 +8,15 @@
   outline: 0;
 }
 
+.margin25 {
+  margin-bottom: 25px !important;
+}
+.text-end {
+  text-align: right;
+}
+.midnight {
+  padding-right: 150px;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -21,6 +30,7 @@ nav {
   display: flex;
   justify-content: flex-end;
 }
+
 .patreon {
   display: block;
   font-size: 1.5rem;
@@ -63,12 +73,14 @@ nav {
 .arrow {
   position: absolute;
   top: 25px;
-  width: 90%;
-  height: 10px;
+  width: 113%;
+  height: 20px;
   background-color: var(--black);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
   animation: arrow 700ms linear infinite;
   transform: rotate(90deg);
+  cursor: default;
+  border-radius: 5px;
 }
 
 .arrow::after,
@@ -76,9 +88,19 @@ nav {
   content: '';
   position: absolute;
   width: 60%;
-  height: 10px;
+  height: 20px;
   right: -8px;
   background-color: var(--black);
+  border-radius: 5px;
+  right: -8px;
+  background-color: var(--black);
+  border-radius: 5px;
+  right: -8px;
+  background-color: var(--black);
+  border-radius: 5px;
+  right: -8px;
+  background-color: var(--black);
+  border-radius: 5px;
 }
 
 .arrow::after {
@@ -92,22 +114,14 @@ nav {
   transform: rotate(-45deg);
 }
 .sentence-container {
-  width: 65%;
-  margin: 30px auto;
+  width: 80%;
+  padding-left: 100px;
   padding-top: 20px;
 }
 .sentence-container > p {
-  font-size: 4.6rem;
-  margin: 0px auto;
-  /* text-rendering: optimizeLegibility;
-  box-sizing: border-box;
-
-  transform: translateY(30%);
-  opacity: 0;
-  animation: rise 0.3s cubic-bezier(0.87, 0, 0.04, 1) 1 forwards;
-  animation-delay: 0ms !important;
-  backface-visibility: hidden; */
+  font-size: 4rem;
 }
+
 .sentence-container span {
   display: inline-block;
 }
@@ -138,6 +152,7 @@ footer > div {
   padding: 20px;
   font-size: 1.6rem;
 }
+
 /* .u-rise {
   display: inline-block;
   transform: translateY(30%);
