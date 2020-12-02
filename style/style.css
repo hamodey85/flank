@@ -11,6 +11,7 @@
 .margin25 {
   margin-bottom: 25px !important;
 }
+
 .text-end {
   text-align: right;
 }
@@ -117,9 +118,13 @@ nav {
   width: 80%;
   padding-left: 100px;
   padding-top: 20px;
+  /* box-sizing: fit-content; */
 }
 .sentence-container > p {
   font-size: 4rem;
+  padding: 10px;
+  /* background: #f0f0f0; */
+  border-radius: 20px;
 }
 
 .sentence-container span {
@@ -132,7 +137,7 @@ nav {
 .join_us {
   width: 300px;
   height: 300px;
-  margin: 200px auto;
+  margin: 50px auto;
 }
 .join_us_btn {
   padding: 15px;
@@ -141,7 +146,7 @@ nav {
   font-size: 2rem;
   text-decoration: none;
   color: #ffffff;
-  background: #4177b4;
+  background: #252525;
   border-radius: 10px;
 }
 footer {
