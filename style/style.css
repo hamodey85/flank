@@ -29,6 +29,7 @@
 body {
   font-family: Barlow;
   overflow-y: hidden;
+  user-select: none;
 }
 @media (max-width: 414px) {
   header {
