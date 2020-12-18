@@ -313,6 +313,7 @@ body {
     text-align: center;
     font-weight: 500;
     font-size: 22px;
-    color: #303131;
+    color: rgba(48, 49, 49, 0.9);
+    background: #ffffff;
   }
 }
