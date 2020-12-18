@@ -26,12 +26,20 @@ function up(e){
 // second layer
 
 const peach = document.querySelector(".peach")
-const second_layer = document.querySelector(".second_layer")
+const secondLayer = document.querySelector(".second_layer")
+const contactLayer = document.querySelector(".contact")
 let whichNextParagraphStillHidden = 2
-second_layer.addEventListener("click",showNextText)
+let isNextLayerOn = false
+secondLayer.addEventListener("click",showNextText)
 function showNextText(e){
+    document.querySelector(`.p${whichNextParagraphStillHidden}`).classList.remove("hidden")
     if(!peach.classList.contains("hidden"))peach.classList.add("hidden")
-    if(whichNextParagraphStillHidden ===6) return
+    if(whichNextParagraphStillHidden ===6) {
+        if(isNextLayerOn) return
+        contactLayer.classList.remove("displayNone")
+        isNextLayerOn = true
+    return
+    }
     document.querySelector(`.p${whichNextParagraphStillHidden}`).classList.remove("hidden")
     whichNextParagraphStillHidden+=1
 }
