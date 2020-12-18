@@ -29,14 +29,23 @@
   opacity: 0;
   visibility: hidden;
 }
-
+.text-clr-green {
+  color: var(--clr-green);
+}
+.text-clr-yellow {
+  color: var(--clr-yellow);
+}
+.text-clr-red {
+  color: var(--clr-red);
+}
 body {
   font-family: Barlow;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 @media (max-width: 414px) {
   header {
     position: relative;
+    width: 100vw;
     height: 100vh;
     padding-top: 25px;
     background: linear-gradient(113.97deg, #7304ff 30.44%, rgba(255, 255, 255, 0.17) 69.5%),
@@ -151,6 +160,7 @@ body {
       font-weight: bold;
       font-size: 30px;
       line-height: 40px;
+      color: #7304ff;
     }
   }
   @keyframes makeFlankBig {
@@ -162,6 +172,48 @@ body {
       margin: 0;
       font-weight: bold;
       font-size: 100px;
+      color: #2afd2e;
     }
+  }
+
+  .second_layer {
+    height: 100vh;
+    padding-left: 40px;
+    padding-top: 87px;
+    background: linear-gradient(
+        346.29deg,
+        rgba(254, 0, 101, 0.2) 11.66%,
+        rgba(255, 255, 255, 0.112) 37.63%,
+        rgba(255, 255, 255, 0.106) 95.28%
+      ),
+      linear-gradient(
+        11.28deg,
+        rgba(115, 4, 255, 0.5) 23.66%,
+        rgba(101, 37, 225, 0.5) 51.04%,
+        rgba(115, 4, 255, 0.5) 72.07%
+      ),
+      #7304ff;
+  }
+  .second_layer > p {
+    display: inline;
+    position: relative;
+    z-index: 10;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .p1 > span {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 50px;
+    left: 230px;
+    width: 60px;
+    height: 60px;
+    background: rgb(240, 111, 111);
+  }
+  .p5 {
+    display: block !important;
+    margin-top: 50px;
   }
 }

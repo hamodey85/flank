@@ -20,3 +20,18 @@ function up(e){
     about_flank_big.classList.remove("about_flank_big_animated")
 
 }
+
+
+
+// second layer
+
+const peach = document.querySelector(".peach")
+const second_layer = document.querySelector(".second_layer")
+let whichNextParagraphStillHidden = 2
+second_layer.addEventListener("click",showNextText)
+function showNextText(e){
+    if(!peach.classList.contains("hidden"))peach.classList.add("hidden")
+    if(whichNextParagraphStillHidden ===6) return
+    document.querySelector(`.p${whichNextParagraphStillHidden}`).classList.remove("hidden")
+    whichNextParagraphStillHidden+=1
+}
