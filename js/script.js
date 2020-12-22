@@ -33,7 +33,11 @@ let isNextLayerOn = false
 secondLayer.addEventListener("click",showNextText)
 function showNextText(e){
     document.querySelector(`.p${whichNextParagraphStillHidden}`).classList.remove("hidden")
-    if(!peach.classList.contains("hidden"))peach.classList.add("hidden")
+    if(!peach.classList.contains("hidden")){
+
+        peach.classList.add("hidden")
+        document.querySelector(".tab_that").classList.add("hidden")
+    }
     if(whichNextParagraphStillHidden ===6) {
         if(isNextLayerOn) return
         contactLayer.classList.remove("displayNone")
@@ -41,5 +45,11 @@ function showNextText(e){
     return
     }
     document.querySelector(`.p${whichNextParagraphStillHidden}`).classList.remove("hidden")
+    if(whichNextParagraphStillHidden >= 2 || whichNextParagraphStillHidden <=5 ){
+        console.log(whichNextParagraphStillHidden);
+        console.log(`.p${whichNextParagraphStillHidden-1}_img`);
+        document.querySelector(`.p${whichNextParagraphStillHidden-1}_img`).classList.add("hidden")
+    }
+
     whichNextParagraphStillHidden+=1
 }

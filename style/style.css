@@ -6,9 +6,7 @@
   --clr-yellow: #fcfd5b;
   --clr-red: #fe0065;
 }
-.flank {
-  color: var(--clr-green);
-}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +16,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  /* overflow: hidden; */
 }
 
 .visible {
@@ -46,9 +43,73 @@
 }
 body {
   font-family: Barlow;
-  /* overflow-y: hidden; */
+}
+
+.desktop {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
+  background: linear-gradient(113.97deg, #7304ff 30.44%, rgba(255, 255, 255, 0.17) 69.5%),
+    linear-gradient(180deg, #2afd2e 22.64%, #7304ff 76.56%);
+}
+.desktop .patreon {
+  width: 262px;
+  height: 43px;
+
+  margin: 0 auto;
+}
+.desktop .patreon a {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 7px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.desktop .flank {
+  text-align: center;
+}
+.desktop h1 {
+  font-weight: bold;
+  font-size: 200px;
+  margin: 0;
+  color: #2afd2e;
+}
+.desktop h2 {
+  top: 463px;
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 64px;
+
+  color: #2afd2e;
+}
+.desktop h3 {
+  margin-top: 100px !important;
+}
+.desktop h3,
+.desktop h4 {
+  margin: 0;
+  font-family: Barlow;
+  line-height: 45.6px;
+  font-weight: 600;
+  font-size: 36px;
+
+  color: #ffffff;
+}
+.desktop h4 > span {
+  color: #2afd2e;
+}
+@media (min-width: 415px) {
+  .mobile_website_wrapper {
+    display: none;
+  }
 }
 @media (max-width: 414px) {
+  .desktop {
+    display: none;
+  }
+
   header {
     position: relative;
     width: 100vw;
@@ -58,12 +119,15 @@ body {
       linear-gradient(180deg, #2afd2e 22.64%, #7304ff 100%);
   }
   .flank {
+    color: var(--clr-green);
     font-weight: bold;
     font-size: 30px;
     line-height: 40px;
     text-align: center;
   }
   .patreon {
+    display: block;
+    text-decoration: none;
     text-align: center;
     color: #ffffff;
     font-weight: bold;
@@ -99,12 +163,18 @@ body {
   .arrow {
     width: 30px;
     height: 30px;
+    animation-name: rise;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    backface-visibility: hidden;
   }
   .arrow::after {
     content: '';
     display: block;
     width: 30px;
     height: 30px;
+    margin-left: -10px;
+    transform: translate(-50%, -50%);
     border-left: 8px solid #2afd2e;
     border-bottom: 8px solid #2afd2e;
     transform: rotate(-45deg);
@@ -116,13 +186,17 @@ body {
     height: 30px;
     left: 50%;
     top: 88%;
-    transform: translate(-50%, -50%);
+    animation-name: rise;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    backface-visibility: hidden;
   }
   .header_arrow::after {
     content: '';
     display: block;
     width: 30px;
     height: 30px;
+    margin-left: -10px;
     transform: translate(-50%, -50%);
     border-left: 8px solid #2afd2e;
     border-bottom: 8px solid #2afd2e;
@@ -223,15 +297,38 @@ body {
     font-size: 30px;
     line-height: 36px;
   }
-  .p1 > span {
+  .second_layer img {
     display: block;
     position: absolute;
     z-index: -1;
-    top: 50px;
-    left: 230px;
     width: 60px;
     height: 60px;
-    background: rgb(240, 111, 111);
+  }
+  .p1 > img {
+    top: 35px;
+    left: 230px;
+  }
+  .p1 > .tab_that {
+    width: 100px;
+    height: 100px;
+  }
+  .p2 > img {
+    width: 100px;
+    height: 100px;
+    top: 40px;
+    left: 80px;
+  }
+  .p3_img {
+    width: 100px;
+    height: 100px;
+    top: 80px;
+    left: 80px;
+  }
+  .p4_img {
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 220px;
   }
   .p5 {
     display: block !important;
@@ -304,16 +401,27 @@ body {
       ),
       #7304ff;
   }
-  .google_btn input {
-    padding: 10px 30px;
-    margin: 5px auto;
-    display: block;
-    border: none;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 500;
-    font-size: 22px;
-    color: rgba(48, 49, 49, 0.9);
-    background: #ffffff;
+  #my-signin2 > div {
+    width: 100% !important;
+  }
+}
+
+.arrow {
+  animation-name: rise;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  backface-visibility: hidden;
+  opacity: 1;
+}
+
+@keyframes rise {
+  0% {
+    opacity: 1;
+    transform: translateY(30%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
