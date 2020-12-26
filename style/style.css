@@ -43,6 +43,7 @@
 }
 body {
   font-family: Barlow;
+  overflow-x: hidden;
 }
 
 .desktop {
@@ -111,7 +112,9 @@ body {
   }
 
   header {
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     width: 100vw;
     height: 100vh;
     padding-top: 25px;
@@ -273,6 +276,7 @@ body {
   .second_layer {
     position: relative;
     height: 100vh;
+    z-index: 200;
     padding-left: 40px;
     padding-top: 87px;
     background: linear-gradient(
@@ -340,6 +344,8 @@ body {
     margin: 20px auto;
   }
   .contact {
+    position: relative;
+    z-index: 300;
     height: 100vh;
     padding-top: 87px;
     padding-left: 30px;

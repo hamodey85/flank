@@ -1,6 +1,32 @@
+const header = document.querySelector("header")
+const secondLayer = document.querySelector(".second_layer")
+const contactLayer = document.querySelector(".contact")
+
+document.addEventListener("scroll",setFixedPosition)
+let PHeight = screen.height
+const layers = [header,secondLayer,contactLayer]
+const TotalLayers = layers.length
+function setFixedPosition(e){
+    let scrollPosition = window.pageYOffset
+    let whichLayer= 1 ;
+    console.log(scrollPosition);
+    console.log(PHeight);
+    if(scrollPosition >= PHeight){
+        PHeight *= 2
+        layers[whichLayer].style.position = 'sticky'
+        layers[whichLayer].style.top = 0
+        whichLayer++
+        if(whichLayer >= TotalLayers) return
+    }
+    console.log(layers[whichLayer]);
+}
+
+
+
 const flankText = document.getElementById('flank')
 const about = document.querySelector('.about')
 const about_flank_big = document.querySelector('.about_flank_big')
+
 
 flankText.addEventListener('mousedown',showPage)
 flankText.addEventListener('touchstart',showPage)
@@ -26,8 +52,8 @@ function up(e){
 // second layer
 
 const peach = document.querySelector(".peach")
-const secondLayer = document.querySelector(".second_layer")
-const contactLayer = document.querySelector(".contact")
+
+
 let whichNextParagraphStillHidden = 2
 let isNextLayerOn = false
 secondLayer.addEventListener("click",showNextText)
@@ -46,8 +72,6 @@ function showNextText(e){
     }
     document.querySelector(`.p${whichNextParagraphStillHidden}`).classList.remove("hidden")
     if(whichNextParagraphStillHidden >= 2 || whichNextParagraphStillHidden <=5 ){
-        console.log(whichNextParagraphStillHidden);
-        console.log(`.p${whichNextParagraphStillHidden-1}_img`);
         document.querySelector(`.p${whichNextParagraphStillHidden-1}_img`).classList.add("hidden")
     }
 
